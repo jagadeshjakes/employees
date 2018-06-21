@@ -1,0 +1,30 @@
+<table class="table">
+<tr>
+	<th>Eid</th>
+	<th>Name</th>
+	<th>Mobile</th>
+	<th>Email</th>
+	<th>City</th>
+	<th>Date of Joining</th>
+	<th>Role</th>
+</tr>
+	{{#each emp as |employee|}}
+		<tr>
+			<td>{{employee.eid}}</td>
+			<td>{{employee.name}}</td>
+			<td>{{employee.mobile}}</td>
+			<td>{{employee.email}}</td>
+			<td>{{employee.city}}</td>
+			<td>{{employee.joining}}</td>
+			<td>
+				{{employee.role}}
+			</td>
+			{{#if employee.canDelete}}
+			<td><button class="btn btn-danger btn-sm" {{action "delete" employee}}>delete</button></td>
+			{{/if}}
+			{{#if employee.canEdit}}
+			<td>{{#link-to 'edit' employee.eid}}Edit{{/link-to}}</td>
+			{{/if}}
+		</tr>
+	{{/each}}
+</table>

@@ -1,0 +1,51 @@
+
+<div class="container">
+	<h1>Filter</h1>
+<!--	<div>
+	<select onchange={{action "setSelection" value="target.value"}}>
+		<option value="no" selected>--Select--</option>
+ 		<option value="name"> Name </option>
+    	<option value="eid">Id</option>
+    	<option value="mobile">Mobile</option>
+    	<option value="email">Email</option>
+    	<option value="city">City</option>
+    	<option value="joining">Date Of Joining</option>
+    	<option value="roles">Role</option>
+	</select>
+{{#if doFilter}}
+	{{#if isRole}}
+		<select onchange={{action "setRole" value="target.value"}}>
+			<option value="no" selected>--Select--</option>
+			<option value="SuperAdmin">SuperAdmin</option>
+			<option value="Admin">Admin</option>
+			<option value="Operator">Operator</option>
+		</select>
+	{{else}}
+		{{input value=value key-up=(action 'filterByName') placeholder="filter Value"}}
+	{{/if}}
+{{/if}}
+</div> -->
+	<div class="form-group row">
+		<div  class="col-1">{{input class="form-control form-control-sm" value=filter.id key-up=(action 'doFilter') placeholder="Id"}}</div>
+		<div  class="col-3">{{input class="form-control form-control-sm" value=filter.name key-up=(action 'doFilter') placeholder="name"}}</div>
+		<div  class="col-2">{{input class="form-control form-control-sm" value=filter.mobile key-up=(action 'doFilter') placeholder="mobile"}}</div>
+		<div  class="col-3">{{input class="form-control form-control-sm" value=filter.email key-up=(action 'doFilter') placeholder="email"}}</div>
+		<div  class="col-2">{{input class="form-control form-control-sm" value=filter.city key-up=(action 'doFilter') placeholder="city"}}</div>
+	</div>
+	<div class="form-group row">
+		From:
+		<div  class="col-3">{{input type="date" class="form-control form-control-sm" value=filter.from min="1990-01-01" max="2018-06-18" onchange=(action 'doFilter') placeholder="joining"}}</div>
+		To:
+		<div  class="col-3">{{input type="date" class="form-control form-control-sm" value=filter.to min="1990-01-01" max="2018-06-18" onchange=(action 'doFilter') placeholder="joining"}}</div>
+		<div  class="col-3">
+			<select class="form-control form-control-sm" onchange={{action "setRole" value="target.value"}}>
+				<option value="" selected>--role--</option>
+				<option value="SuperAdmin">SuperAdmin</option>
+				<option value="Admin">Admin</option>
+				<option value="Operator">Operator</option>
+			</select>
+		</div>
+		<button class="btn btn-success btn-sm" {{action "doFilter"}}>Filter</button>
+	</div>
+</div>
+{{yield results}}

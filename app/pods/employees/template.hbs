@@ -1,0 +1,6 @@
+{{#list-filter type=date employees=model as |filteredResults|}}
+	{{#employee-listing refreshRoute=(action 'refreshRoute') emp=filteredResults}}
+	{{/employee-listing}}
+{{/list-filter}}
+
+{{outlet}}

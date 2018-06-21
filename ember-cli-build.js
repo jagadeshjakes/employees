@@ -6,6 +6,16 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
+    destDir: 'assets'
+  });
+  app.import('bower_components/highcharts/highcharts.js');
+  //app.import('bower_components/highcharts/highstock.js');
+  /*app.import('bower_components/highcharts/modules/exporting.js');
+  app.import('bower_components/highcharts/modules/map.js');
+  app.import('bower_components/highcharts/highmaps.js');*/
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

@@ -6,6 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('employees');
+  this.route('addnew');
+  this.route('edit',{path:'/:employee/edit'});
+  this.route('change-password');
 });
 
 export default Router;
