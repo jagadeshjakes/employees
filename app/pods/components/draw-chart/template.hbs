@@ -1,1 +1,33 @@
-{{yield}}
+
+<div class="row">
+<select class="form-control form-control-sm col-2" onchange={{action "setChart" value="target.value"}}>
+  <option value="login">Login</option>
+  <option value="password" selected>Password</option>
+  <!--<option value="column">Column</option>
+  <option value="bar">Bar</option>
+  <option value="scatter">Scatter</option>-->
+</select>
+<div class="col-2">
+<input type="radio" name="chart" onchange={{action "setType" "line"}} checked>Line
+</div>
+<div class="col-2">
+<input type="radio" name="chart" onchange={{action "setType" "area"}}>Area
+</div>
+<div class="col-2">
+<input type="radio" name="chart" onchange={{action "setType" "column"}}>Column
+</div>
+<div class="col-2">
+<input type="radio" name="chart" onchange={{action "setType" "bar"}}>Bar
+</div>
+<div class="col-2">
+<input type="radio" name="chart" onchange={{action "setType" "scatter"}}>Scatter
+</div>
+</div>
+<div class="row">
+  <div id="chartSpace" class="col-7">
+  </div>
+  <div id="pieSpace" class="col-5">
+  </div>
+</div>
+<div id="extra">
+</div>

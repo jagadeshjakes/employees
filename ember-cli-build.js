@@ -11,6 +11,8 @@ module.exports = function(defaults) {
     destDir: 'assets'
   });
   app.import('bower_components/highcharts/highcharts.js');
+  app.import('bower_components/radio-button/radio-button.js');
+
   //app.import('bower_components/highcharts/highstock.js');
   /*app.import('bower_components/highcharts/modules/exporting.js');
   app.import('bower_components/highcharts/modules/map.js');

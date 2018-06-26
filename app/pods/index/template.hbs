@@ -1,6 +1,10 @@
-<div class="row">
-<div class="col-6">{{draw-chart content=model.city chartOptions=cityOptions}}</div>
-{{#if model.isAdmin}}
-<div class="col-6">{{draw-chart content=model.password chartOptions=passwordOptions}}</div>
-{{/if}}
+
+<div class="container">
+
+
+
+{{#draw-chart content=model}}
+{{/draw-chart}}
+
+<!--<iframe src="http://localhost:4200/#/addnew"></iframe>-->
 </div>

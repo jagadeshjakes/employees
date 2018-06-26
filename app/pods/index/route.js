@@ -12,4 +12,12 @@ export default Ember.Route.extend({
     console.log(datas);
     return datas;
   }
+  /*afterModel:function(model,transition){
+    var controller=this.controllerFor('index');
+    controller.send('setCategories');
+  },
+  setupController: function(controller, model) {
+    this._super(controller,model);
+    this.send('setCategories')(model.password.categories);
+  }*/
 });

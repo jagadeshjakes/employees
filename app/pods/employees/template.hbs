@@ -1,5 +1,5 @@
-{{#list-filter type=date employees=model as |filteredResults|}}
-	{{#employee-listing refreshRoute=(action 'refreshRoute') emp=filteredResults}}
+{{#list-filter employees=model as |filteredResults|}}
+	{{#employee-listing emp=filteredResults}}
 	{{/employee-listing}}
 {{/list-filter}}
 
