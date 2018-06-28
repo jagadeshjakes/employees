@@ -27,7 +27,18 @@ export default Ember.Component.extend({
     	}
 			today = yyyy+'-'+mm+'-'+dd;
 			this.set('filter.to',today);
-      this.set('results',this.get('employees'));
+			var datas;
+			var arg={city:localStorage.getItem('city')}
+			$.ajax({
+			type:"POST",
+			async:false,
+			data:{arg:JSON.stringify(arg)},
+			url:"/getUsersByCity",
+			success:function(data){
+				datas=data;
+			}
+		});
+      this.set('results',datas);
   	},
 
   	actions: {

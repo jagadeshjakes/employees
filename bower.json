@@ -13,6 +13,8 @@
     "loader.js": "ember-cli/loader.js#3.4.0",
     "qunit": "~1.20.0",
     "bootstrap": "^4.1.1",
-    "radio-button": "^1.2.1"
+    "radio-button": "^1.2.1",
+    "highcharts": "^6.1.1",
+    "modal": "^1.1.9"
   }
 }

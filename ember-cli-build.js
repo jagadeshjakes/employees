@@ -10,8 +10,12 @@ module.exports = function(defaults) {
   app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
     destDir: 'assets'
   });
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('bower_components/highcharts/highcharts.js');
-  app.import('bower_components/radio-button/radio-button.js');
+  //app.import('bower_components/modal/stylesheets/jquery.modal.css');
+  //app.import('bower_components/modal/javascripts/jquery.modal.js');
+
+  //app.import('bower_components/radio-button/radio-button.js');
 
   //app.import('bower_components/highcharts/highstock.js');
   /*app.import('bower_components/highcharts/modules/exporting.js');

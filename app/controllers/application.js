@@ -1,6 +1,7 @@
 import Ember from 'ember';
 import $ from 'jquery';
 export default Ember.Controller.extend({
+	toShow:false,
 	actions:{
 		logout(){
 			$.ajax({
@@ -12,6 +13,10 @@ export default Ember.Controller.extend({
 				}
 			});
 			location.reload();
+		},
+		toggleShow(){
+			console.log(this.get('toShow'));
+			this.toggleProperty('toShow');
 		}
 	}
 });

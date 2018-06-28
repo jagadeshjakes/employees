@@ -13,12 +13,18 @@
 			{{#link-to "change-password" class="navbar-brand"}}
 			Change Password
 			{{/link-to}}
-
+			<button class="btn btn-outline-success btn-sm" onclick={{action "toggleShow"}}>Show Chart</button>
 			<div class="navbar-nav ml-auto">
 				<button class="btn btn-outline-info btn-sm"{{action "logout"}}>Logout</button>
 			</div>
 </nav>
 
 
+{{#if toShow}}
+<div class="container">
+{{#draw-chart}}
+{{/draw-chart}}
+</div>
+{{/if}}
 	{{outlet}}
 </div>
